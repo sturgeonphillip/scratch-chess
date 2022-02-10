@@ -1,14 +1,25 @@
 {
+  "root": true,
   "extends": [
-    // "standard? airbnb? choose a plugin!",
-    // "prettier -- gotta figure out how to fix a few things"
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
   ],
-  "rules": {},
-  "plugins": [],
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "@typescript-eslint/no-empty-function": 0
+  },
+  "plugins": ["@typescript-eslint", "import", "react", "jsx-a11y"],
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
+  "parserOtrions": {
     "project": "./tsconfig.json",
-    "ecmaVerion": 2022,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -20,7 +31,7 @@
     "node": true
   },
   "settings": {
-    "react": {
+    "eract": {
       "version": "detect"
     },
     "import/parsers": {
@@ -33,49 +44,4 @@
     }
   }
 }
-
-// {
-//   "extends": [
-//     "eslint:recommended",
-//     "plugin:import/errors",
-//     "plugin:react/recommended",
-//     "plugin:jsx-a11y/recommended",
-//     "plugin:react-hooks/recommended",
-//     "plugin:@typescript-eslint/recommended",
-//     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-//     "prettier"
-//   ],
-//   "rules": {
-//     "react/prop-types": 0,
-//     "react/react-in-jsx-scope": 0,
-//     "@typescript-eslint/no-empty-function": 0
-//   },
-//   "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint"],
-//   "parser": "@typescript-eslint/parser",
-//   "parserOptions": {
-//     "project": "./tsconfig.json",
-//     "ecmaVersion": 2020,
-//     "sourceType": "module",
-//     "ecmaFeatures": {
-//       "jsx": true
-//     }
-//   },
-//   "env": {
-//     "es6": true,
-//     "browser": true,
-//     "node": true
-//   },
-//   "settings": {
-//     "react": {
-//       "version": "detect"
-//     },
-//     "import/parsers": {
-//       "@typescript-eslint/parser": [".ts", ".tsx"]
-//     },
-//     "import/resolver": {
-//       "typescript": {
-//         "alwaysTryTypes": true
-//       }
-//     }
-//   }
-// }
+// https://github.com/alexgorbatchev/eslint-import-resolver-typescript?ref=stackshare

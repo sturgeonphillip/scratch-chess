@@ -1,17 +1,11 @@
-import { render } from 'react'
+import Square from './Components/Board/Square'
 
-const App = () => {
-
+export default function App(): JSX.Element {
 	return (
 		<>
-		<h1>App!</h1>
+		<h1>Chess From Scratch!</h1>
+		<Square />
 		</>
+
 	)
 }
-
-render(
-	// <StrictMode>
-		<App />,
-	// </StrictMode>,
-	document.getElementById("root")
-);

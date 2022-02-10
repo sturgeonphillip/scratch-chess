@@ -1,10 +1,11 @@
 node_modules
+.parcel-cache/
 .cache/
 dist/
 .env
-.DS_Store
 coverage/
 .vscode/
 package-lock.json
+.DS_Store
 
-need to update to parcel-cache?
+pieces.tsx
