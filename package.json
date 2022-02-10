@@ -10,6 +10,7 @@
   "author": "Phillip Sturgeon",
   "license": "MIT",
   "devDependencies": {
+    "parcel": "^2.3.0",
     "prettier": "^2.5.1"
   }
 }
