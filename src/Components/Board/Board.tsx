@@ -2,9 +2,7 @@
 // import grid from './grid'
 // console.log(grid())
 
-
-
-	const grid: string[][] = Array.from({ length: 8 }, (_, i) =>
+const grid: string[][] = Array.from({ length: 8 }, (_, i) =>
     String.fromCharCode("A".charCodeAt(0) + i)
   ).map((x) => {
     const column: string[] = [];
@@ -15,7 +13,7 @@
     }
     return column;
   });
-	// console.log(grid[0]);
+	 console.log(grid[0]);
 
 export default function Board() {
 

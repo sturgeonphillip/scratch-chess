@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  .white-square {
+    @apply object-contain text-black border-2 bg-amber-100 aspect-square border-stone-600;
+  }
+  .black-square {
+    @apply object-contain text-white bg-black border-2 aspect-square border-stone-600;
+  }
+}
+/***
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+
+*/

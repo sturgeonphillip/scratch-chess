@@ -2,16 +2,22 @@ export default function Square():JSX.Element {
 
 return (
 	<>
-
-  <button className={`bg-cyan-blue`}>Roger</button>
-<div>
-
-   <div className="py-8 space-y-6 text-base leading-7 text-gray-600 bg-zinc-800">1</div> 
-   <div className="py-8 space-y-6 text-base leading-7 text-gray-600 bg-sky-800"></div>
-   <div className="py-8 space-y-6 text-base leading-7 text-gray-600 bg-zinc-800"></div>
-   <div className="py-8 space-y-6 text-base leading-7 text-gray-600 bg-sky-800"></div>
-</div>
-   
+  {/* // test */}
+  <button className={`bg-blue-800 m-1`}>Move Piece</button>
+  <div className={`grid grid-rows-8 grid-cols-8 gap-1`}>
+  <div className="text-black bg-lime-800">1</div> 
+   <div className="text-black bg-blue-800">2</div>
+   <div className="text-black bg-lime-800">3</div>
+   <div className="text-black bg-blue-800">4</div>
+   <div className="text-black bg-lime-800">5</div> 
+   <div className="text-black bg-blue-800">6</div>
+   <div className="text-black bg-lime-800">7</div>
+   <div className="text-black bg-blue-800">8</div>
+   <div className="text-black bg-lime-800">9</div> 
+   <div className="text-black bg-blue-800">10</div>
+   <div className="text-black bg-lime-800">11</div>
+   <div className="text-black bg-blue-800">12</div>
+  </div>
 
 	</>
 )
