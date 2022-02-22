@@ -1,8 +1,10 @@
-export default function BlackSquare() {
+import {GridItem} from '../../types/SquareTypes'
+
+export default function BlackSquare({coordinate}:GridItem):JSX.Element {
   return (
     <>
       <div className={`black-square`}>
-        <p className={`m-1`}>black</p>
+        <div className={`m-1`}>{coordinate}</div>
       </div>
     </>
   );

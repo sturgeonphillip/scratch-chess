@@ -1,45 +1,26 @@
-// import Square from './Square'
-// import grid from './grid'
+import blackRow, { whiteRow } from "../Rows/rowCreator";
+import { gridArray } from "./grid";
+// import grid, {gridArray} from './grid'
 // console.log(grid())
+// const {A, B, C, D, E, F, G, H } = grid;
 
-const grid: string[][] = Array.from({ length: 8 }, (_, i) =>
-    String.fromCharCode("A".charCodeAt(0) + i)
-  ).map((x) => {
-    const column: string[] = [];
-    let i = 0;
-    while (i < 8) {
-      column.push(x.concat((i + 1).toString()));
-      i++;
-    }
-    return column;
-  });
-	 console.log(grid[0]);
-
+console.log(gridArray);
 export default function Board() {
-
-	return (
-		<>
-		<ul>
-			{
-				grid.map((x) => {
-					// const rowKey = x[0][0].split('')[0];
-					const row = x;
-					return (
-						
-							row.map(s => <h2 key={s}>{s}</h2>)
-					)
-				})
-			}
-		</ul>
-		</>
-	)
+  return (
+    <>
+      <div className={`container mx-auto`}>
+        <div
+          className={`mt-10 grid grid-rows-8 grid-cols-8 border-4 border-stone-600`}
+        >
+          {gridArray.map((arr, idx) => {
+            if (idx % 2 === 0) {
+              return <>{whiteRow(arr)}</>;
+            } else {
+              return <>{blackRow(arr)}</>;
+            }
+          })}
+        </div>
+      </div>
+    </>
+  );
 }
-// const gridLetters:string[][] = grid.map((x) => {
-// 	for ( let i = 0; i < grid.length; i++ ) {
-// 		console.log(`row: ${i + 1}`)
-// 		console.log(grid[i])
-		
-// 	}
-
-// })
-// console.log(gridLetters);
