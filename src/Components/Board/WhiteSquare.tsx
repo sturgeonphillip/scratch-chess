@@ -1,5 +1,7 @@
-import {GridItem} from '../../types/SquareTypes'
+import {GridItem} from '../../types/SquareTypes';
+// import Piece from
 
+// const Piece:PieceType = 'queen';
 
 export default function WhiteSquare({coordinate}:GridItem):JSX.Element {
 
@@ -11,4 +13,3 @@ export default function WhiteSquare({coordinate}:GridItem):JSX.Element {
     </>
   )
 }
-

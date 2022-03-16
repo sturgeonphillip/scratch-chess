@@ -5,7 +5,11 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Saniretro", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

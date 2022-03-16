@@ -1,5 +1,5 @@
-import WhiteSquare from './WhiteSquare'
-import BlackSquare from './BlackSquare'
+// import WhiteSquare from './WhiteSquare'
+// import BlackSquare from './BlackSquare'
 
 // import grid from './grid';
 export default function GameBoard() {

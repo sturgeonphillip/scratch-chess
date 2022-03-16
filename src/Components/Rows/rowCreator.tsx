@@ -8,7 +8,7 @@ export const whiteRow = (arr:string[]) => {
 		{
 			arr.map((el, idx) => {
 				if (idx % 2 === 0) {
-					return <div key={el}><WhiteSquare coordinate={el}/></div>
+					return <div key={el}><WhiteSquare coordinate={el} /></div>
 				} else {
 					return <div key={el}><BlackSquare coordinate={el} /></div>
 				}
