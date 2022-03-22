@@ -12,15 +12,18 @@
     "prettier"
   ],
   "rules": {
+    "function-call-argument-newline": ["error", "consistent"],
     "react/prop-types": 0,
     // "react/react-in-jsx-scope": 0,
-    "@typescript-eslint/no-empty-function": 0
+    "@typescript-eslint/no-empty-function": 0,
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   },
   "plugins": ["@typescript-eslint", "import", "react", "jsx-a11y"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json",
-    "ecmaVersion": 2020,
+    "ecmaVersion": 2022,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true

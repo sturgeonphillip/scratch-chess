@@ -4,7 +4,8 @@
   "description": "Building Chess From Scratch",
   "source": "./src/index.html",
   "scripts": {
-    "format": "prettier --write \"src/**/*.{html, js, ts, jsx, tsx}\"",
+    "format": "prettier --write \"**/**/*.{html,js,ts,jsx,tsx}\"",
+    "check": "prettier --check \"**/**/*.{html,js,ts,tsx,tsx}\"",
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx}\"",
     "dev": "parcel",
     "build": "parcel build"

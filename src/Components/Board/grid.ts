@@ -1,50 +1,38 @@
+export interface SquareProps {
+  coordinates: string;
+  x: number;
+  y: number;
+  color: string;
+}
+
+const grid: SquareProps[] = [];
 const createGrid = () => {
-  const letters: string[][] = Array.from({ length: 8 }, (_, i) =>
-    String.fromCharCode("A".charCodeAt(0) + i)
-  ).map((x) => {
-    const column: string[] = [];
-    let i = 0;
-    while (i < 8) {
-      column.push(x.concat((i + 1).toString()));
-      i++;
+  const xAxis: string[] = Array.from({ length: 8 }, (val, i) =>
+    String.fromCharCode('A'.charCodeAt(0) + i)
+  );
+  // Array.from({ length: 8 }, (val, i) =>
+  //   String.fromCharCode('A'.charCodeAt(0) + i)
+  // );
+
+  for (let y = 7; y >= 0; y--) {
+    for (let x = 0; x < xAxis.length; x++) {
+      const location = xAxis[x] + String([y + 1]);
+      const color = (x + y) % 2 === 0 ? 'white-square' : 'black-square';
+      const Square: SquareProps = {
+        coordinates: location,
+        x: x,
+        y: y,
+        color: color,
+      };
+
+      grid.push(Square);
     }
-    return column.reverse();
-  });
-  return letters;
+  }
+
+  return grid;
 };
 
-const gridArray = createGrid();
-console.log(gridArray);
-export default gridArray;
+createGrid();
+console.log(grid);
 
-// const griddir = [['A1', 'A2', '...'], ['B1', 'B2', '...'], ['C', '...'], ['d']];
-/**
- * // white row
-   		if (idx % 2 === 0) {
-					return <div key={el}><WhiteSquare coordinate={el} /></div>
-				} else {
-					return <div key={el}><BlackSquare coordinate={el} /></div>
-				}
-
-  // black row
-   		if (idx % 2 === 0) {
-         return <div key={el}><BlackSquare coordinate={el} /></div>
-      } else {
-        return <div key={el}><WhiteSquare coordinate={el} /></div>
-				}
- 
- // board:
-        if (idx % 2 === 0) {
-              return (
-                <>        
-              <div key={idx}>{whiteRow(arr)}</div>
-              </>
-              )
-            } else {
-              return (
-                <>        
-              <div key={idx}>{blackRow(arr)}</div>
-              </>
-              )
-            }
- */
+export default grid;

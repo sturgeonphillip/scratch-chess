@@ -1,4 +1,20 @@
-@import url("https://fonts.cdnfonts.com/css/saniretro");
+@import url('https://fonts.cdnfonts.com/css/saniretro');
+
+@font-face {
+  font-family: 'Saniretro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Saniretro'),
+    url('../public/assets/fonts/saniretro/Saniretro.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'breamcatcher';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/assets/fonts/bream-catcher/breamcatcher.ttf')
+    format('truetype');
+}
 
 @tailwind base;
 @tailwind components;
@@ -7,10 +23,10 @@
 
 @layer components {
   .white-square {
-    @apply object-contain text-black border-2 bg-amber-100 aspect-square border-stone-600;
+    @apply object-contain font-serif text-black border-2 bg-amber-100 aspect-square border-stone-600;
   }
   .black-square {
-    @apply object-contain text-white bg-black border-2 aspect-square border-stone-600;
+    @apply object-contain font-serif text-white bg-black border-2 aspect-square border-stone-600;
   }
 }
 /***
@@ -22,3 +38,5 @@ module.exports = {
 }
 
 */
+
+/* https://tailwindcss.com/docs/customizing-colors */

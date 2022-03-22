@@ -1,3 +1,5 @@
+// all types need revision
+
 export type Style = 'black-square' | 'white-square';
 
 export type PieceType =
@@ -20,7 +22,6 @@ export interface ChessPiece {
 }
 
 export interface GridItem {
-  // style: string;
   coordinate: string;
 }
 

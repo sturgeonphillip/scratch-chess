@@ -1,1 +1,1 @@
-// export module '*.png';
+export declare module "*.png";
