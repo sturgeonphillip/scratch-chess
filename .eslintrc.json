@@ -12,12 +12,12 @@
     "prettier"
   ],
   "rules": {
-    "function-call-argument-newline": ["error", "consistent"],
+    "function-call-argument-newline": ["error", "consistent"],  
     "react/prop-types": 0,
-    // "react/react-in-jsx-scope": 0,
+    "react/react-in-jsx-scope": 0,
     "@typescript-eslint/no-empty-function": 0,
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "off"
+    // "no-unused-vars": "off",
+    // "@typescript-eslint/no-unused-vars": "off"
   },
   "plugins": ["@typescript-eslint", "import", "react", "jsx-a11y"],
   "parser": "@typescript-eslint/parser",
@@ -40,7 +40,7 @@
       "version": "detect"
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [".js", ".ts", ".tsx", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
       "typescript": {

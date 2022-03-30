@@ -1,4 +1,5 @@
 // clicking 2nd property in a piece's tuple deletes the source image from its link
+// for svg imports as react components, reference https://parceljs.org/recipes/react/#svg
 
 const black = {
   pawn: [
